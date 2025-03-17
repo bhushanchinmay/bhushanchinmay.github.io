@@ -1,24 +1,15 @@
 /* Base Styles */
 :root {
-    --primary-color: #2d3436;
-    --secondary-color: #718096;
-    --accent-color: #4299e1;
-    --light-gray: #f8fafc;
-    --gray: #e2e8f0;
-    --dark-gray: #718096;
+    --primary: #2d3436;
+    --secondary: #718096;
+    --accent: #4299e1;
+    --bg-light: #f8fafc;
+    --border: #e2e8f0;
+    --text-dark: #718096;
     --white: #ffffff;
-    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.02), 
-                  0 12px 16px rgba(0, 0, 0, 0.03);
-    --card-hover-shadow: 0 8px 12px rgba(0, 0, 0, 0.04), 
-                        0 16px 24px rgba(0, 0, 0, 0.06);
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.02), 0 12px 16px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.04), 0 16px 24px rgba(0, 0, 0, 0.06);
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --heading-color: #2c3e50;
-    --text-primary: #34495e;
-    --text-secondary: #7f8c8d;
-    --section-spacing: 60px;
-    --card-spacing: 40px;
-    --card-inner-spacing: 20px;
 }
 
 * {
@@ -29,9 +20,9 @@
 
 /* Base font size adjustments */
 body {
-    font-family: var(--font-main);
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: var(--primary-color);
+    color: var(--primary);
     background-color: var(--white);
     font-size: 15px;
 }
@@ -44,7 +35,7 @@ body {
 }
 
 a {
-    color: var(--accent-color);
+    color: var(--accent);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -63,7 +54,7 @@ a:hover {
 .site-logo {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--primary);
 }
 
 /* Profile Section */
@@ -71,9 +62,9 @@ a:hover {
     max-width: 800px;
     margin: 30px auto;
     padding: 40px 30px;
-    background-color: var(--light-gray);
+    background-color: var(--bg-light);
     border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow);
 }
 
 .profile-content {
@@ -101,7 +92,7 @@ a:hover {
 .tagline {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: var(--secondary-color);
+    color: var(--secondary);
     margin-bottom: 15px;
 }
 
@@ -127,7 +118,7 @@ a:hover {
     height: 35px;
     border-radius: 50%;
     background-color: var(--white);
-    color: var(--accent-color);
+    color: var(--accent);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     position: relative; /* Add this */
     transition: var(--transition);
@@ -135,7 +126,7 @@ a:hover {
 }
 
 .social-links a:hover {
-    background-color: var(--accent-color);
+    background-color: var(--accent);
     color: var(--white);
     transform: scale(1.1);
 }
@@ -169,7 +160,7 @@ a:hover {
     bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--dark-gray);
+    background-color: var(--text-dark);
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
@@ -195,7 +186,7 @@ a:hover {
     bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--dark-gray);
+    background-color: var(--text-dark);
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
@@ -215,8 +206,7 @@ a:hover {
 .content-section {
     max-width: 800px;
     margin: 0 auto;
-    padding: var(--section-spacing) 0;
-    border-top: 1px solid var(--gray);
+    padding: 40px 0; /* Adjusted spacing */
 }
 
 .section-title {
@@ -225,14 +215,12 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 10px;  /* Add gap between icon and text */
-    color: var(--heading-color);
-    border-bottom: 2px solid var(--gray);
-    padding-bottom: 15px;
+    color: var(--primary);
     margin-bottom: 30px;
 }
 
 .section-title i {
-    color: var(--dark-gray);
+    color: var(--text-dark);
 }
 
 .view-all {
@@ -243,7 +231,7 @@ a:hover {
 
 .section-description {
     margin-bottom: 30px;
-    color: var(--dark-gray);
+    color: var(--text-dark);
 }
 
 /* Card Styles */
@@ -262,7 +250,7 @@ a:hover {
     border-radius: 16px;
     background: var(--white);
     border: 1px solid rgba(0, 0, 0, 0.04);
-    box-shadow: var(--card-shadow);
+    box-shadow: var(--shadow);
     transform: translateY(0);
     transition: var(--transition);
     position: relative;
@@ -276,14 +264,14 @@ a:hover {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--accent-color), #63b3ed);
+    background: linear-gradient(90deg, var(--accent), #63b3ed);
     opacity: 0;
     transition: var(--transition);
 }
 
 .card:hover {
     transform: translateY(-6px);
-    box-shadow: var(--card-hover-shadow);
+    box-shadow: var(--shadow-hover);
 }
 
 .card:hover::before {
@@ -297,8 +285,8 @@ a:hover {
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    background: var(--light-gray);
-    color: var(--accent-color);
+    background: var(--bg-light);
+    color: var(--accent);
     font-size: 1.25rem;
     transition: var(--transition);
 }
@@ -362,7 +350,7 @@ a:hover {
 .card-content h3 {
     font-size: 1.15rem;
     font-weight: 600;
-    color: var(--heading-color);
+    color: var(--primary);
     margin-bottom: 8px;
     letter-spacing: -0.01em;
     line-height: 1.4;
@@ -370,7 +358,7 @@ a:hover {
 
 .card-subtitle {
     font-size: 0.85rem;
-    color: var(--text-secondary);
+    color: var(--text-dark);
     margin-bottom: 10px;  /* Reduced from 12px */
     letter-spacing: 0.01em;
 }
@@ -386,7 +374,7 @@ a:hover {
     margin-bottom: 8px;  /* Reduced from 12px */
     font-size: 0.9rem;
     line-height: 1.5;  /* Reduced from 1.6 */
-    color: var(--text-primary);
+    color: var(--primary);
     padding-left: 24px;
 }
 
@@ -394,13 +382,13 @@ a:hover {
     content: "•";
     position: absolute;
     left: 8px;
-    color: var(--accent-color);
+    color: var(--accent);
     font-weight: bold;
 }
 
 .card-content p {
     margin: 0 0 15px;
-    color: var(--text-primary);
+    color: var(--primary);
     font-size: 0.95rem;
     line-height: 1.6;
 }
@@ -408,7 +396,7 @@ a:hover {
 .tech-stack {
     margin-top: auto;
     padding-top: 12px;  /* Reduced from 15px */
-    border-top: 1px solid var(--gray);
+    border-top: 1px solid var(--border);
 }
 
 .tech-tag {
@@ -416,15 +404,15 @@ a:hover {
     padding: 6px 12px;
     margin: 3px;
     border-radius: 20px;
-    background-color: var(--light-gray);
+    background-color: var(--bg-light);
     font-size: 0.8rem;
     font-weight: 500;
-    color: var(--text-secondary);
+    color: var(--text-dark);
     transition: var(--transition);
 }
 
 .tech-tag:hover {
-    background-color: var(--accent-color);
+    background-color: var(--accent);
     color: var(--white);
     transform: translateY(-2px);
 }
@@ -432,10 +420,9 @@ a:hover {
 /* Footer */
 footer {
     padding: 30px 0;
-    border-top: 1px solid var(--gray);
-    margin-top: 60px;
+    margin-top: 40px; /* Reduced margin */
     text-align: center;
-    color: var(--dark-gray);
+    color: var(--text-dark);
     font-size: 0.9rem;
 }
 
@@ -570,7 +557,7 @@ footer {
     height: 1px;
     bottom: 0;
     left: 0;
-    background-color: var(--accent-color);
+    background-color: var(--accent);
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease;
@@ -613,7 +600,7 @@ html {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: var(--accent-color);
+    background-color: var(--accent);
     color: white;
     width: 40px;
     height: 40px;
@@ -641,14 +628,14 @@ html {
     padding: 6px 12px;
     margin: 3px;
     border-radius: 20px;
-    background-color: var(--light-gray);
+    background-color: var(--bg-light);
     font-size: 0.8rem;
-    color: var(--secondary-color);
+    color: var(--secondary);
     transition: var(--transition);
 }
 
 .tech-tag:hover {
-    background-color: var(--accent-color);
+    background-color: var(--accent);
     color: var(--white);
     transform: translateY(-2px);
 }
@@ -657,7 +644,7 @@ html {
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 30px;
-    color: var(--primary-color);
+    color: var(--primary);
 }
 
 /* Update company logos */
@@ -712,7 +699,7 @@ html {
 /* Profile Summary */
 .profile-summary {
     margin: 20px 0;
-    color: var(--secondary-color);
+    color: var(--secondary);
     line-height: 1.6;
     max-width: 800px;
 }
@@ -721,7 +708,7 @@ html {
     margin-bottom: 15px;
     font-size: 0.95rem;
     line-height: 1.7;
-    color: var(--secondary-color);
+    color: var(--secondary);
 }
 
 /* Floating Contact Button */
@@ -730,7 +717,7 @@ html {
     align-items: center;
     gap: 8px;
     padding: 12px 24px;
-    background-color: var(--accent-color);
+    background-color: var(--accent);
     color: white;
     border-radius: 25px;
     font-weight: 500;

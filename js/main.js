@@ -1,45 +1,45 @@
 document.addEventListener('DOMContentLoaded', () => {
-    initializeUI();
+    initUI();
 });
 
-const initializeUI = () => {
-    initBackToTopButton();
-    initCardAnimations();
+const initUI = () => {
+    initScrollButton();
+    initCardEffects();
 };
 
-const initBackToTopButton = () => {
-    const button = createBackToTopButton();
-    handleScrollBehavior(button);
+const initScrollButton = () => {
+    const btn = createScrollButton();
+    handleScroll(btn);
 };
 
-const createBackToTopButton = () => {
-    const button = document.createElement('a');
-    button.href = '#';
-    button.className = 'back-to-top';
-    button.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    document.body.appendChild(button);
-    return button;
+const createScrollButton = () => {
+    const btn = document.createElement('a');
+    btn.href = '#';
+    btn.className = 'back-to-top';
+    btn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    document.body.appendChild(btn);
+    return btn;
 };
 
-const handleScrollBehavior = (button) => {
+const handleScroll = (btn) => {
     window.addEventListener('scroll', () => {
-        button.classList.toggle('show', window.pageYOffset > 300);
+        btn.classList.toggle('show', window.pageYOffset > 300);
     });
 
-    button.addEventListener('click', (e) => {
+    btn.addEventListener('click', (e) => {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 };
 
-const initCardAnimations = () => {
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
+const initCardEffects = () => {
+    document.querySelectorAll('.card').forEach(card => {
         card.addEventListener('mouseenter', () => {
             card.style.transform = 'translateY(-8px)';
             const icon = card.querySelector('.card-icon');
             if (icon) icon.style.transform = 'scale(1.1)';
         });
+        
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'translateY(0)';
             const icon = card.querySelector('.card-icon');
