@@ -5,72 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chinmay Bhushan - Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Fonts - Use similar fonts to the website -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
 </head>
 <body>
-    <header class="main-header">
-        <div class="container">
-            <a href="#" class="site-logo">chinmaybhushan.com</a>
-            <nav class="main-nav">
-                <!-- Add navigation items as needed -->
-            </nav>
-        </div>
-    </header>
-
     <main>
-        <!-- Profile Section -->
         <section class="profile-section">
             <div class="container">
                 <div class="profile-content">
                     <div class="profile-image">
-                        <!-- Replace with your image -->
-                        <img src="images/profile.jpg" alt="Chinmay Bhushan">
+                        <img src="images/profile-image.jpeg" alt="Chinmay Bhushan">
                     </div>
                     <div class="profile-details">
-                        <h1>Chinmay Bhushan</h1>
-                        <p class="tagline">Software Engineer specializing in Java & Web Technologies</p>
-                        <p class="previous">Previous: Member of Technical Staff at <span class="highlight">Oracle</span>, Software Engineer at <span class="highlight">Qualcomm</span></p>
-                        <p>I write on <a href="#" class="text-link">my blog</a> and <a href="#" class="text-link">Twitter</a>. Message me at <a href="mailto:bhushan.chinmay@gmail.com" class="text-link">bhushan.chinmay@gmail.com</a>.</p>
+                        <h2>Chinmay Bhushan</h2>
+                        <p class="tagline">Software Developer 2 at Oracle | Java, Spring Boot, RESTful APIs, OAuth 2.0, Python and Cloud Technologies</p>
+                        <div class="profile-summary">
+                            <p>Hi, I'm a 4+ years of experienced software developer with a proven track record in designing and optimizing mission-critical APIs and cloud infrastructures.</p>
+                            <p>At Oracle, I led projects that significantly improved operational efficiency—developing an auto-renew feature and an account termination API that reduced workload by 30%. I also drove cost reductions through strategic cloud migrations, while ensuring robust security measures like OAuth 2.0.</p>
+                            <p>With expertise in Java, Python, and JavaScript, along with modern web technologies, troubleshooting, and system optimization, I consistently deliver innovative and scalable solutions that drive business success.</p>
+                        </div>
                         
                         <div class="social-links">
-                            <a href="https://linkedin.com/in/chinmaybhushan" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://twitter.com/your-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="https://github.com/your-github" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="mailto:bhushan.chinmay@gmail.com"><i class="fas fa-envelope"></i></a>
+                            <a href="https://linkedin.com/in/chinmaybhushan" target="_blank" data-tooltip="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/bhushanchinmay" target="_blank" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="mailto:bhushan.chinmay@gmail.com" data-tooltip="Email"><i class="fas fa-envelope"></i></a>
+                            <a href="https://drive.google.com/file/d/1SaGofYXsRDft_hLCuvLyWkxEFLaz5AL1/view?usp=sharing" target="_blank" data-tooltip="Resume"><i class="fas fa-file-alt"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Writing/Blog Section -->
-        <section class="content-section" id="writing">
-            <div class="container">
-                <h2 class="section-title"><i class="fas fa-pen"></i> Writing</h2>
-                <div class="view-all"><a href="#">View all <i class="fas fa-arrow-right"></i></a></div>
-                <p class="section-description">I write regularly about software development, Java, and web technologies.</p>
-                
-                <!-- Sample Blog Cards - Replace with your content -->
-                <div class="cards-container">
-                    <!-- Add blog cards here -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
         <section class="content-section" id="experience">
             <div class="container">
                 <h2 class="section-title"><i class="fas fa-briefcase"></i> Experience</h2>
-                <div class="view-all"><a href="#">View all <i class="fas fa-arrow-right"></i></a></div>
                 
                 <div class="cards-container">
                     <div class="card">
                         <div class="card-icon">
-                            <!-- Oracle logo placeholder -->
-                            <div class="company-logo oracle-logo">O</div>
+                            <div class="company-logo">
+                                <i class="fas fa-cloud"></i>
+                            </div>
                         </div>
                         <div class="card-content">
                             <h3>Oracle Inc.</h3>
@@ -86,8 +65,9 @@
                     
                     <div class="card">
                         <div class="card-icon">
-                            <!-- Qualcomm logo placeholder -->
-                            <div class="company-logo qualcomm-logo">Q</div>
+                            <div class="company-logo">
+                                <i class="fas fa-signal"></i>
+                            </div>
                         </div>
                         <div class="card-content">
                             <h3>Qualcomm Inc.</h3>
@@ -99,17 +79,14 @@
                             </ul>
                         </div>
                     </div>
-                    
-                    <!-- Add more experience cards -->
                 </div>
+                <div class="view-all"><a href="/sections/experience.html"> View all <i class="fas fa-arrow-right"></i></a></div>
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section class="content-section" id="projects">
             <div class="container">
                 <h2 class="section-title"><i class="fas fa-code"></i> Projects</h2>
-                <div class="view-all"><a href="https://github.com/your-github" target="_blank">GitHub <i class="fas fa-arrow-right"></i></a></div>
                 
                 <div class="cards-container">
                     <div class="card">
@@ -118,8 +95,17 @@
                         </div>
                         <div class="card-content">
                             <h3>BBot: Discord Bot</h3>
-                            <p>A discord bot that interacts with users, has Google search functionality, and stores search history in a database.</p>
-                            <p class="tech-stack">Tech-stack: Python, PostgreSQL, Heroku</p>
+                            <p class="card-subtitle">Personal Project</p>
+                            <ul class="achievement-list">
+                                <li>A discord bot that interacts with users, has Google search functionality, and stores search history in a database.</li>
+                                <li>Implemented authentication and search history tracking features.</li>
+                                <li>Deployed on Heroku with continuous integration.</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Heroku</span>
+                            </div>
                         </div>
                     </div>
                     
@@ -129,17 +115,24 @@
                         </div>
                         <div class="card-content">
                             <h3>YouTube Video Fetcher</h3>
-                            <p>Java-based application using YouTube Data API to retrieve videos based on user queries.</p>
-                            <p class="tech-stack">Tech-stack: Java, RESTful APIs, Spring Boot</p>
+                            <p class="card-subtitle">Personal Project</p>
+                            <ul class="achievement-list">
+                                <li>Java-based application using YouTube Data API to retrieve videos based on user queries.</li>
+                                <li>Implemented caching to improve performance and reduce API calls.</li>
+                                <li>Built with Spring Boot for scalability and maintainability.</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">RESTful APIs</span>
+                                <span class="tech-tag">Spring Boot</span>
+                            </div>
                         </div>
                     </div>
-                    
-                    <!-- Add more project cards -->
                 </div>
+                <div class="view-all"><a href="https://github.com/bhushanchinmay" target="_blank">GitHub <i class="fas fa-arrow-right"></i></a></div>
             </div>
         </section>
 
-        <!-- Education Section -->
         <section class="content-section" id="education">
             <div class="container">
                 <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
@@ -147,8 +140,7 @@
                 <div class="cards-container">
                     <div class="card">
                         <div class="card-icon">
-                            <!-- University logo placeholder -->
-                            <div class="education-logo">BIT</div>
+                            <div class="education-logo">B</div>
                         </div>
                         <div class="card-content">
                             <h3>Birla Institute of Technology, Mesra</h3>
