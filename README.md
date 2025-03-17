@@ -20,7 +20,6 @@ This website serves as a professional online presence to showcase Chinmay's expe
 ## Features
 
 - Responsive design that works on both desktop and mobile devices
-- Dark mode toggle with preference saved in local storage
 - Interactive elements like card animations on hover
 - Back-to-top button for easy navigation
 - Social media links
