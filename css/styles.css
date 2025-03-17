@@ -568,33 +568,6 @@ footer {
     transform-origin: bottom left;
 }
 
-/* Additional Section Styles */
-#writing .cards-container .card,
-#projects .cards-container .card {
-    position: relative;
-    overflow: hidden;
-}
-
-/* Remove unused classes */
-.featured-tag,
-#contact-form,
-.form-group,
-.form-control,
-.submit-button,
-#writing .cards-container .card,
-.oracle-logo, 
-.qualcomm-logo,
-.dark-mode-toggle,
-body.dark-mode,
-[class*="dark-mode"] {
-    display: none;
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
 /* Back to top button */
 .back-to-top {
     position: fixed;
@@ -660,40 +633,12 @@ html {
     font-size: 1.5rem;
 }
 
-.company-logo .fa-database {
-    color: #F80000;
-}
-
-.company-logo .fa-microchip {
-    color: #3253DC;
-}
-
 .company-logo .fa-cloud {
     color: #F80000;  /* Oracle red */
 }
 
 .company-logo .fa-signal {
     color: #3253DC;  /* Qualcomm blue */
-}
-
-.company-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* Optimize animations */
-.card {
-    will-change: transform;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    transition: var(--transition);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .card {
-        transition: var(--transition);
-    }
 }
 
 /* Profile Summary */
@@ -711,43 +656,7 @@ html {
     color: var(--secondary);
 }
 
-/* Floating Contact Button */
-.floating-contact-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
-    background-color: var(--accent);
-    color: white;
-    border-radius: 25px;
-    font-weight: 500;
-    box-shadow: 0 4px 12px rgba(9, 132, 227, 0.2);
-    transition: all 0.3s ease;
-    margin-bottom: 20px;
-}
-
-.floating-contact-btn:hover {
-    background-color: #0056b3;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(9, 132, 227, 0.3);
-}
-
-.floating-contact-btn i {
-    font-size: 1.1em;
-}
-
-/* Add smooth scroll behavior */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Enhance typography */
-h1, h2, h3, h4, h5, h6 {
-    letter-spacing: -0.025em;
-}
-
-/* Optimize animations */
+/* Media Queries */
 @media (prefers-reduced-motion: reduce) {
     * {
         transition: none !important;
